@@ -1,0 +1,169 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head>     
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>IL FABBRO : PEQUETINA</title>     
+    <link rel="stylesheet" href="styles.css">     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">     
+    <link rel="preconnect" href="https://fonts.googleapis.com">     
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>     
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+ 
+</head> 
+<body>     
+    <!-- Header -->     
+    <header>         
+        <div class="header-container">             
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/c_pad,w_50/v1740937789/Screenshot_12_bb6lna_Circle_ivd4eq.png" alt="IL FABBRO Logo" class="logo">
+                </a>
+            </div>           
+            <div class="brand-name">IL FABBRO : PEQUETINA</div>             
+            <div class="menu-icon" id="menuToggle">                 
+                <a href="products.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Volver
+                 
+                </a>
+            </div>         
+        </div>         
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="gallery-section">
+            <h2 class="gallery-title">Galería de Productos</h2>
+            <div class="gallery-grid">
+                <!-- 16 imágenes en la galería -->
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 1" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 2" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 3" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 4" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 5" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 6" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 7" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 8" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 9" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 10" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 11" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 12" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 13" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 14" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 15" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741393151/p1_m5dll7.jpg" alt="Prensa de grabado 16" class="gallery-img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para visualizar la imagen ampliada -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" class="modal-img" src="" alt="Imagen ampliada">
+        </div>
+    </div>
+
+    <!-- Footer vacío -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>IL FABBRO PRENSAS</h3>
+                <p>Creando herramientas de calidad para artistas desde 1995</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Enlaces</h4>
+                <a href="about.html">Quiénes Somos</a>
+                <a href="products.html">Productos</a>
+                <a href="#">Blog</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Prensas.IlFabbro" target="_blank"><i class="fab fa-facebook-f"> </i></a>
+                    <a href="https://www.instagram.com/il.fabbro.prensas/#"target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IL FABBRO PRENSAS- Todos los derechos reservados</p>
+        </div>    </footer>
+
+    <!-- JavaScript para la funcionalidad del modal -->
+    <script>
+        // Función para abrir el modal
+        function openModal(element) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            const imgSrc = element.querySelector('img').src;
+            const imgAlt = element.querySelector('img').alt;
+            
+            modal.style.display = 'block';
+            modalImg.src = imgSrc;
+            modalImg.alt = imgAlt;
+            
+            // Desactivar el scroll del body cuando el modal está abierto
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            
+            // Reactivar el scroll del body cuando el modal está cerrado
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cerrar el modal al hacer clic fuera de la imagen
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Cerrar el modal con la tecla Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
