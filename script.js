@@ -9,7 +9,22 @@ const chatToggle = document.getElementById('chat-toggle');
 const chatContainer = document.getElementById('chat-container');
 const chatClose = document.getElementById('chat-close');
 const indicatorsContainer = document.getElementById('carouselIndicators');
-
+// JavaScript for menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+            mobileMenu.classList.remove('active');
+        }
+    });
+});
 // Menu Toggle
 menuToggle.addEventListener('click', () => {
     menu.classList.toggle('active');

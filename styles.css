@@ -33,13 +33,17 @@ h1, h2, h3, h4 {
 /* Layout */
 .header-container {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto auto 1fr auto;
     align-items: center;
     max-width: 1900px;
     margin: 0 auto;
     padding: 0 20px;
+    gap: 20px;
 }
-
+.logo-container {
+    display: flex;
+    align-items: center;
+}
 main {
     min-height: 100vh;
     padding-top: 70px;
@@ -49,6 +53,58 @@ section {
     padding: 60px 0;
 }
 
+/* Desktop Menu Styles */
+.desktop-menu {
+    display: block;
+    justify-self: end;
+}
+
+.desktop-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-menu ul li {
+    position: relative;
+}
+
+.desktop-menu ul li a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.desktop-menu ul li a i {
+    font-size: 16px;
+}
+
+.desktop-menu ul li a:hover {
+    color: var(--primary-light);
+}
+
+.desktop-menu ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.desktop-menu ul li:hover::after {
+    width: 100%;
+}
 /* Header Styles */
 header {
     background-color: var(--dark-bg);
@@ -58,12 +114,6 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
 
 .logo {
     height: 50px;
@@ -80,17 +130,18 @@ header {
 }
 
 .brand-name {
+    font-family: 'Noto Serif', serif;
+    font-weight: 900;
     color: var(--light-text);
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 38px;
     letter-spacing: 1px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    grid-column: 2;
+    white-space: nowrap;
 }
 
 /* Menu Styles */
 .menu-icon {
+    display: none; /* Hide by default on desktop */
     justify-self: end;
     color: var(--light-text);
     font-size: 24px;
@@ -115,6 +166,8 @@ header {
     box-shadow: var(--box-shadow);
     width: 250px;
     transition: var(--transition);
+    z-index: 1001;
+
 }
 
 .menu.active {
@@ -911,7 +964,7 @@ footer {
     border-radius: 30px;
     cursor: pointer;
     box-shadow: var(--box-shadow);
-    z-index: 10000;
+    z-index: 9999;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -974,6 +1027,21 @@ footer {
 }
 
 @media (max-width: 992px) {
+    .header-container {
+        grid-template-columns: auto 1fr auto;
+    }
+    
+    .desktop-menu {
+        display: none; /* Hide desktop menu on tablet and below */
+    }
+    
+    .menu-icon {
+        display: block; /* Show hamburger menu on tablet and below */
+    }
+   
+    .brand-name {
+        font-size: 15px;
+    }
     .carousel-slide {
         height: 500px;
     }
@@ -999,7 +1067,8 @@ footer {
 
 @media (max-width: 768px) {
     .brand-name {
-        font-size: 18px;
+        font-weight: 300;
+        font-size: 12px;
     }
     
     .carousel-slide {
@@ -1046,7 +1115,7 @@ footer {
 
 @media (max-width: 576px) {
     .header-container {
-        padding: 0 15px;
+        padding: 0.2 4px;
     }
     
     .logo {
@@ -1054,7 +1123,8 @@ footer {
     }
     
     .brand-name {
-        font-size: 16px;
+        font-weight: 300;
+        font-size: 14px;
     }
     
     .carousel-slide {
