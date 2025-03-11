@@ -8,31 +8,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=Noto+Serif:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header with logo, brand name, and hamburger menu -->
-    <header>
-        <div class="header-container">
-            <div class="logo-container">
-                <img src="https://res.cloudinary.com/dloaaxni6/image/upload/c_pad,w_50/v1740937789/Screenshot_12_bb6lna_Circle_ivd4eq.png" alt="IL FABBRO Logo" class="logo">
-            </div>
-            <div class="brand-name">PRENSAS DE GRABADO IL FABBRO</div>
-            <div class="menu-icon" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </div>
+ <!-- Header with horizontal menu for desktop -->
+<header>
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="https://res.cloudinary.com/dloaaxni6/image/upload/c_pad,w_50/v1740937789/Screenshot_12_bb6lna_Circle_ivd4eq.png" alt="Logo" class="logo">
         </div>
-        <nav class="menu" id="menu">
+        
+        <h1 class="brand-name">PRENSAS DE GRABADO IL FABBRO
+        </h1>
+        
+        <!-- Desktop Menu -->
+              <!-- Desktop Menu -->
+              <nav class="desktop-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="products.html">Nuestros Modelos</a></li>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="faq.html">Preguntas frecuentes</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        
+        <!-- Mobile Menu Icon (hamburger) -->
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="menu" id="mobileMenu">
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-                <li><a href="products.html"><i class="fas fa-store"></i> Productos</a></li>                
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
-                <li><a href="#"><i class="fas fa-tools"></i> Servicios</a></li>
-                <li><a href="#"><i class="fas fa-envelope"></i> Contacto</a></li>
+                <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Nuestros Modelos</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> Sobre nosotros</a></li>
+                <li><a href="faq.html"><i class="fas fa-question"></i> Preguntas frecuentes</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
             </ul>
-        </nav>
-    </header>
-
+        </div>
+    </div>
+</header>
     <main>
         <!-- Hero Section with Carousel -->
         <section class="hero">
@@ -99,12 +116,14 @@
         <div class="footer-content">
             <div class="footer-info">
                 <h3>IL FABBRO PRENSAS</h3>
-                <p>Creando herramientas de calidad para artistas desde 1995</p>
+                <p>Fabricando soluciones de alta calidad desde 1995. 
+                    <br>Nuestro compromiso es ofrecer prensas de excelencia que superen las expectativas de los profesionales más exigentes.</p>
+
             </div>
             <div class="footer-nav">
                 <h4>Enlaces</h4>
+                <a href="products.html">Nuestros Modelos</a>
                 <a href="about.html">Quiénes Somos</a>
-                <a href="products.html">Productos</a>
                 <a href="#">Blog</a>
                 <a href="#">Política de Privacidad</a>
             </div>
@@ -113,13 +132,13 @@
                 <div class="social-links">
                     <a href="https://www.facebook.com/Prensas.IlFabbro" target="_blank"><i class="fab fa-facebook-f"> </i></a>
                     <a href="https://www.instagram.com/il.fabbro.prensas/#"target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://x.com/PrensasilFabbro"target="_blank"><i class="fab fa-x"></i></a>
+                    
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 IL FABBRO PRENSAS- Todos los derechos reservados</p>
+            <p>&copy; 2025 IL FABBRO PRENSAS- Todos los derechos reservados</p><br><br>
         </div>
     </footer>
 
