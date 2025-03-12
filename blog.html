@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRENSAS DE GRABADO IL FABBRO</title>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dloaaxni6/image/upload/c_pad,w_512/v1741731889/Screenshot_12_bb6lna_wlro8x.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=Noto+Serif:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!-- Header with horizontal menu for desktop -->
+<header>
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="https://res.cloudinary.com/dloaaxni6/image/upload/c_pad,w_50/v1740937789/Screenshot_12_bb6lna_Circle_ivd4eq.png" alt="IL FABBRO Logo" class="logo">
+            </a>
+        </div>
+        
+        <h1 class="brand-name"> IL FABBRO : NUESTRO BLOG
+        </h1>
+        
+        <!-- Desktop Menu -->
+              <!-- Desktop Menu -->
+              <nav class="desktop-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="products.html">Nuestros Modelos</a></li>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="faq.html">Preguntas frecuentes</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        
+        <!-- Mobile Menu Icon (hamburger) -->
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Nuestros Modelos</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> Sobre nosotros</a></li>
+                <li><a href="faq.html"><i class="fas fa-question"></i> Preguntas frecuentes</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="blog-header" style="text-align: center; margin: 20px auto 50px; max-width: 800px;">
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 48px; color: var(--secondary-color); position: relative; margin-bottom: 30px;">Crónicas del Grabador</h1>
+        <div style="width: 100px; height: 3px; background-color: var(--primary-color); margin: 0 auto 20px;"></div>
+        <p style="font-family: 'Noto Serif', serif; font-size: 18px; color: #666; font-style: italic;">Historias, técnicas y secretos del arte del grabado</p>
+    </div>
+
+    <div class="blog-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px;">
+        
+        <!-- Artículo 1 -->
+        <div class="blog-card" style="background-color: white; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); position: relative; transition: transform 0.3s ease;">
+            <div class="blog-image" style="height: 200px; overflow: hidden;">
+                <img src="/api/placeholder/400/320" alt="Prensa de grabado" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+            </div>
+            <div class="blog-content" style="padding: 25px; position: relative;">
+                <span class="blog-date" style="display: inline-block; font-family: 'Playfair Display', serif; font-size: 14px; color: var(--primary-color); margin-bottom: 10px; font-style: italic;">15 de febrero, 2025</span>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 15px; color: var(--secondary-color); border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">Cómo elegir la mejor prensa para grabado</h2>
+                <p style="font-family: 'Noto Serif', serif; color: #555; line-height: 1.8; margin-bottom: 20px;">Las prensas de grabado vienen en distintos modelos y tamaños. Aquí te cuento cuál es la mejor opción según tu tipo de trabajo...</p>
+                <a href="#" class="blog-read-more" onclick="mostrarArticulo(1); return false;" style="display: inline-flex; align-items: center; color: var(--primary-color); font-family: 'Playfair Display', serif; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                    Continuar leyendo
+                    <i class="fas fa-long-arrow-alt-right" style="margin-left: 8px; transition: transform 0.3s ease;"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Artículo 2 -->
+        <div class="blog-card" style="background-color: white; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); position: relative; transition: transform 0.3s ease;">
+            <div class="blog-image" style="height: 200px; overflow: hidden;">
+                <img src="/api/placeholder/400/320" alt="Mantenimiento de prensa" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+            </div>
+            <div class="blog-content" style="padding: 25px; position: relative;">
+                <span class="blog-date" style="display: inline-block; font-family: 'Playfair Display', serif; font-size: 14px; color: var(--primary-color); margin-bottom: 10px; font-style: italic;">28 de enero, 2025</span>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 15px; color: var(--secondary-color); border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">El mantenimiento de una prensa de grabado</h2>
+                <p style="font-family: 'Noto Serif', serif; color: #555; line-height: 1.8; margin-bottom: 20px;">Para que tu prensa dure años en perfectas condiciones, es fundamental seguir ciertas rutinas de mantenimiento...</p>
+                <a href="#" class="blog-read-more" onclick="mostrarArticulo(2); return false;" style="display: inline-flex; align-items: center; color: var(--primary-color); font-family: 'Playfair Display', serif; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                    Continuar leyendo
+                    <i class="fas fa-long-arrow-alt-right" style="margin-left: 8px; transition: transform 0.3s ease;"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Artículo 3 (nuevo) -->
+        <div class="blog-card" style="background-color: white; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); position: relative; transition: transform 0.3s ease;">
+            <div class="blog-image" style="height: 200px; overflow: hidden;">
+                <img src="/api/placeholder/400/320" alt="Historia del grabado" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+            </div>
+            <div class="blog-content" style="padding: 25px; position: relative;">
+                <span class="blog-date" style="display: inline-block; font-family: 'Playfair Display', serif; font-size: 14px; color: var(--primary-color); margin-bottom: 10px; font-style: italic;">5 de marzo, 2025</span>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 15px; color: var(--secondary-color); border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">La historia del grabado a través de los siglos</h2>
+                <p style="font-family: 'Noto Serif', serif; color: #555; line-height: 1.8; margin-bottom: 20px;">Desde las primeras xilografías hasta las técnicas modernas, un recorrido por la historia de este arte milenario...</p>
+                <a href="#" class="blog-read-more" onclick="mostrarArticulo(3); return false;" style="display: inline-flex; align-items: center; color: var(--primary-color); font-family: 'Playfair Display', serif; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                    Continuar leyendo
+                    <i class="fas fa-long-arrow-alt-right" style="margin-left: 8px; transition: transform 0.3s ease;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vista detallada del artículo -->
+    <div id="detalle" style="display:none; max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: var(--border-radius); box-shadow: var(--box-shadow); position: relative;">
+        <button onclick="volver()" class="back-btn"><i class="fas fa-arrow-left"></i> Volver a artículos</button>
+        
+        <div class="article-header" style="text-align: center; margin: 30px 0;">
+            <h2 id="article-title" style="font-family: 'Playfair Display', serif; font-size: 32px; color: var(--secondary-color); margin-bottom: 15px;"></h2>
+            <div style="width: 60px; height: 2px; background-color: var(--primary-color); margin: 0 auto 15px;"></div>
+            <span id="article-date" style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--primary-color);"></span>
+        </div>
+        
+        <div id="contenido-articulo" style="font-family: 'Noto Serif', serif; line-height: 1.8; color: #444; font-size: 17px;">
+            <!-- El contenido del artículo se insertará aquí -->
+        </div>
+        
+        <div class="article-footer" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; display: flex; justify-content: space-between;">
+            <div class="article-tags" style="display: flex; gap: 10px;">
+                <span style="font-size: 14px; padding: 4px 12px; background-color: #f5f0e9; border-radius: 20px; color: var(--secondary-color);">#grabado</span>
+                <span style="font-size: 14px; padding: 4px 12px; background-color: #f5f0e9; border-radius: 20px; color: var(--secondary-color);">#prensas</span>
+            </div>
+            <div class="article-share" style="display: flex; gap: 15px;">
+                <a href="#" style="color: var(--secondary-color); font-size: 16px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="color: var(--secondary-color); font-size: 16px;"><i class="fab fa-twitter"></i></a>
+                <a href="#" style="color: var(--secondary-color); font-size: 16px;"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Actualizar el script para mejorar la experiencia de los artículos -->
+
+
+    <!-- Footer with about link and social media links -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>IL FABBRO PRENSAS</h3>
+                <p>Fabricando soluciones de alta calidad desde 1995. 
+                    <br>Nuestro compromiso es ofrecer prensas de excelencia que superen las expectativas de los profesionales más exigentes.</p>
+
+            </div>
+            <div class="footer-nav">
+                <h4>Enlaces</h4>
+                <a href="products.html">Nuestros Modelos</a>
+                <a href="about.html">Quiénes Somos</a>
+                <a href="blog.html">Blog</a>
+                <a href="pol.html">Política de Privacidad</a>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Prensas.IlFabbro" target="_blank"><i class="fab fa-facebook-f"> </i></a>
+                    <a href="https://www.instagram.com/il.fabbro.prensas/#"target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/PrensasilFabbro"target="_blank"><i class="fab fa-x"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IL FABBRO PRENSAS- Todos los derechos reservados</p><br><br>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+ 
+    <script>
+        const articulos = [
+            {
+                titulo: "Cómo elegir la mejor prensa para grabado",
+                fecha: "15 de febrero, 2025",
+                contenido: "Las prensas de grabado vienen en distintos modelos y tamaños. Aquí te cuento cuál es la mejor opción según tu tipo de trabajo.<br><br>Una prensa de tórculo es ideal para grabado en huecograbado. Su diseño con cilindro y platina permite aplicar una presión uniforme en toda la superficie, lo que resulta perfecto para técnicas como aguafuerte, aguatinta o punta seca.<br><br>Para linografía y otras técnicas en relieve, una prensa vertical puede ser suficiente, aunque muchos artistas prefieren un tórculo por su versatilidad. Si trabajas principalmente con xilografía, una prensa de presión plana podría ser más adecuada.<br><br>El tamaño de la prensa debe determinarse por el formato de papel con el que planeas trabajar. Recuerda que necesitarás una superficie de trabajo mayor que tu papel para acomodar la matriz y los fieltros.<br><br>La construcción es otro factor crucial: las prensas con estructura de acero ofrecen mayor durabilidad y estabilidad que las de aluminio, aunque son más pesadas y costosas.<br><br>Finalmente, considera tu espacio de trabajo y presupuesto. Existen excelentes opciones portátiles si tienes limitaciones de espacio, pero generalmente ofrecen menos presión que los modelos de mesa más robustos."
+            },
+            {
+                titulo: "El mantenimiento de una prensa de grabado",
+                fecha: "28 de enero, 2025",
+                contenido: "Para que tu prensa dure años en perfectas condiciones, es fundamental seguir ciertas rutinas de mantenimiento.<br><br>La limpieza regular es esencial. Después de cada sesión de trabajo, limpia cualquier residuo de tinta o suciedad de los rodillos, la platina y otras partes de la prensa. Utiliza un paño suave y productos de limpieza no corrosivos.<br><br>La lubricación de los componentes móviles debe realizarse periódicamente. Los rodamientos, engranajes y ejes necesitan estar bien lubricados para funcionar correctamente. Usa aceite de máquina de buena calidad y aplícalo según las recomendaciones del fabricante.<br><br>Revisa y ajusta regularmente la presión de la prensa. Con el tiempo, los resortes y otros componentes pueden desgastarse, lo que afecta la precisión de la presión. Una presión inadecuada puede comprometer la calidad de tus grabados.<br><br>Protege tu prensa del polvo y la humedad cuando no esté en uso. Una funda de tela transpirable puede ser ideal para este propósito.<br><br>Inspecciona periódicamente los fieltros y mantón. Estos componentes se desgastan con el uso y pueden necesitar ser reemplazados o acondicionados para mantener resultados óptimos.<br><br>Si notas ruidos inusuales o resistencia al girar los rodillos, es momento de una revisión más profunda. No ignores estos signos, ya que podrían indicar problemas que, si no se atienden, pueden provocar daños mayores."
+            },
+            {
+                titulo: "La historia del grabado a través de los siglos",
+                fecha: "5 de marzo, 2025",
+                contenido: "El grabado es una de las técnicas artísticas más antiguas y fascinantes, con una historia que se remonta a varios milenios.<br><br>Las primeras manifestaciones de grabado se encuentran en China, alrededor del siglo II d.C., con la invención del papel y las primeras xilografías. Estas primeras obras eran principalmente textos budistas ilustrados con imágenes sencillas.<br><br>En Europa, el grabado se popularizó durante el siglo XV con la introducción de la imprenta de Gutenberg. Los primeros grabadores europeos importantes como Alberto Durero y Martin Schongauer elevaron esta técnica al nivel de arte refinado.<br><br>El siglo XVII vio el desarrollo del aguafuerte, técnica que permitió a artistas como Rembrandt crear obras con una extraordinaria riqueza de tonos y texturas. Sus grabados al aguafuerte revolucionaron las posibilidades expresivas del medio.<br><br>En los siglos XVIII y XIX surgieron nuevas técnicas como la litografía, inventada por Alois Senefelder, que permitió a artistas como Goya y Daumier crear tiradas mayores con gran detalle y variedad tonal.<br><br>El siglo XX trajo una explosión de creatividad en el grabado, con artistas como Picasso, Miró y Hayter explorando sus posibilidades expresivas. La serigrafía se popularizó, especialmente con el movimiento Pop Art y artistas como Andy Warhol.<br><br>Hoy, el grabado continúa evolucionando, integrando nuevas tecnologías junto con las técnicas tradicionales, demostrando la vitalidad continua de este arte ancestral que sigue cautivando a artistas y coleccionistas por igual."
+            }
+        ];
+    
+        function mostrarArticulo(index) {
+            document.getElementById("article-title").innerText = articulos[index - 1].titulo;
+            document.getElementById("article-date").innerText = articulos[index - 1].fecha;
+            document.getElementById("contenido-articulo").innerHTML = articulos[index - 1].contenido;
+            document.getElementById("detalle").style.display = "block";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    
+        function volver() {
+            document.getElementById("detalle").style.display = "none";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    
+        // Añadir efecto hover a las tarjetas de blog
+        document.addEventListener('DOMContentLoaded', function() {
+            const blogCards = document.querySelectorAll('.blog-card');
+            blogCards.forEach(card => {
+                card.addEventListener('mouseover', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.querySelector('.blog-image img').style.transform = 'scale(1.1)';
+                    this.querySelector('.blog-read-more i').style.transform = 'translateX(5px)';
+                });
+                
+                card.addEventListener('mouseout', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.querySelector('.blog-image img').style.transform = 'scale(1)';
+                    this.querySelector('.blog-read-more i').style.transform = 'translateX(0)';
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

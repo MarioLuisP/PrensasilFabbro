@@ -483,6 +483,8 @@ header {
 }
 
 .primary-btn {
+    display: inline-block;
+    text-align: center;
     background-color: var(--primary-color);
     color: white;
     box-shadow: 0 6px 12px rgba(150, 75, 50, 0.4), 
@@ -1020,9 +1022,13 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
+    
     .featured-product {
         margin: 0 20px;
+    }
+    .brand-name {
+        font-size: 15px;
     }
 }
 
