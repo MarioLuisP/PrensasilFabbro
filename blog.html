@@ -200,7 +200,10 @@
             document.getElementById("article-date").innerText = articulos[index - 1].fecha;
             document.getElementById("contenido-articulo").innerHTML = articulos[index - 1].contenido;
             document.getElementById("detalle").style.display = "block";
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            const articulo = document.getElementById('detalle');
+            if (articulo) {
+             articulo.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     
         function volver() {
