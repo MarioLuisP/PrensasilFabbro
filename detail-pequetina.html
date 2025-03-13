@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pequetina - PRENSAS DE GRABADO IL FABBRO</title>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dloaaxni6/image/upload/c_pad,w_512/v1741731889/Screenshot_12_bb6lna_wlro8x.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=Noto+Serif:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para la página de detalles del producto */
+        .product-detail-section {
+            padding: 100px 0 80px;
+            background-color: #f5f0e9;
+        }
+
+        .product-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .product-detail-container .back-btn {
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .product-detail-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-detail-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), var(--primary-light));
+        }
+
+        .product-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 40px 20px;
+            text-align: center;
+        }
+
+        .product-name {
+            font-size: 42px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .product-name::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .product-tagline {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-style: italic;
+        }
+
+        .product-image-wrapper {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.8s ease;
+        }
+
+        .product-details-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px;
+            gap: 40px;
+        }
+
+        .product-description {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .product-description h3 {
+            font-size: 28px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .product-description h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .product-description p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .product-features {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .product-features h3 {
+            font-size: 28px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .product-features h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .features-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            color: var(--primary-color);
+        }
+
+        .product-cta {
+            padding: 30px 40px 50px;
+            text-align: center;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-color) 20%, var(--primary-dark) 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(201, 100, 66, 0.3);
+            border: 2px solid transparent;
+            text-transform: uppercase;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(201, 100, 66, 0.4);
+            background: linear-gradient(135deg, var(--primary-dark) 20%, var(--primary-color) 100%);
+        }
+
+        .contact-btn i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .product-dimensions {
+            background-color: #f9f5f0;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-top: 40px;
+        }
+
+        .dimensions-title {
+            font-size: 22px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .dimensions-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .dimension-item {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            min-width: 200px;
+            flex: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .dimension-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .dimension-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .dimension-label {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Media queries específicas */
+        @media (max-width: 768px) {
+            .product-header {
+                padding: 30px 20px 15px;
+            }
+            
+            .product-name {
+                font-size: 32px;
+            }
+            
+            .product-tagline {
+                font-size: 16px;
+            }
+            
+            .product-image-wrapper {
+                height: 400px;
+            }
+            
+            .product-details-content {
+                padding: 30px 20px;
+            }
+            
+            .product-description h3, 
+            .product-features h3 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-header {
+                padding: 25px 15px 10px;
+            }
+            
+            .product-name {
+                font-size: 28px;
+            }
+            
+            .product-image-wrapper {
+                height: 300px;
+            }
+            
+            .product-details-content {
+                padding: 20px 15px;
+                gap: 30px;
+            }
+            
+            .contact-btn {
+                padding: 12px 30px;
+                font-size: 14px;
+            }
+            
+            .dimension-item {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+ <!-- Header with horizontal menu for desktop -->
+<header>
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="https://res.cloudinary.com/dloaaxni6/image/upload/c_pad,w_50/v1740937789/Screenshot_12_bb6lna_Circle_ivd4eq.png" alt="IL FABBRO Logo" class="logo">
+            </a>
+        </div>
+        
+        <h1 class="brand-name">PRENSAS DE GRABADO IL FABBRO
+        </h1>
+        
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="products.html">Nuestros Modelos</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="faq.html">Preguntas frecuentes</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Menu Icon (hamburger) -->
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Nuestros Modelos</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> Sobre nosotros</a></li>
+                <li><a href="faq.html"><i class="fas fa-question"></i> Preguntas frecuentes</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Sección de detalle del producto -->
+    <section class="product-detail-section">
+        <div class="product-detail-container">
+            <!-- Botón volver -->
+            <div class="buttons-container">
+                <a href="products.html" class="back-btn"><i class="fas fa-arrow-left"></i> Volver</a>
+                <a href="galeria-pequetina.html" class="back-btn"><i class="fas fa-images"></i> Galería</a>
+            </div>
+            
+            <div class="product-detail-card">
+                <div class="product-header">
+                    <h2 class="product-name">La Pequetina</h2>
+                    <p class="product-tagline">Pequeña en tamaño, grande en prestaciones</p>
+                </div>
+                
+                <div class="product-image-wrapper">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741820518/peque1_3_4_ithxpe.png" alt="Prensa de grabado La Pequetina" class="product-image">
+                </div>
+                
+                <div class="product-details-content">
+                    <div class="product-description">
+                        <h3>Descripción</h3>
+                        <p>Una hermosísima prensita para pequeños formatos, con las mismas prestaciones que una prensa de gran tamaño. La Pequetina combina elegancia, practicidad y potencia en un diseño compacto que no compromete calidad.</p>
+                        <p>Sumamente cómoda para transportar, práctica para llevar a cualquier evento y estética para ponerla arriba del modular...(broma). Imprimir con ella aporta una dosis extra al placer de hacerlo, lo puedo asegurar.</p>
+                        <p>Ligera y fácil de usar, guardar y transportar. Su base con tacos de goma evita la necesidad de fijación adicional, proporcionando estabilidad en cualquier superficie.</p>
+                    </div>
+                    
+                    <div class="product-features">
+                        <h3>Características</h3>
+                        <ul class="features-list">
+                            <li>35 cm de rodillo para impresión neta</li>
+                            <li>Rodillos macizos para darle peso, robustez y durabilidad</li>
+                            <li>Completamente montada sobre rulemanes para un deslizamiento suave</li>
+                            <li>Estructura con regatones de goma antideslizantes</li>
+                            <li>Permite grabados de hasta 35x75 cm </li>
+                            <li>Base de tacos de goma sin necesidad de fijación adicional</li>
+                            <li>Diseño compacto ideal para espacios reducidos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-dimensions">
+                    <h4 class="dimensions-title">Dimensiones</h4>
+                    <div class="dimensions-grid">
+                        <div class="dimension-item">
+                            <div class="dimension-value">35 cm</div>
+                            <div class="dimension-label">Rodillo para impresión</div>
+                        </div>
+                        <div class="dimension-item">
+                            <div class="dimension-value">iso A3</div>
+                            <div class="dimension-label">Tamaño de la imagen recomenda</div>
+                        </div>
+                        <div class="dimension-item">
+                            <div class="dimension-value">22 kg</div>
+                            <div class="dimension-label">Peso total</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-cta">
+                    <a href="https://wa.me/5493516639502?text=Hola,%20he%20estado%20visitando%20tu%20página%20de%20Il%20Fabbro%20Prensas%0AMe%20interesaría%20recibir%20más%20información%20sobre%20el%20modelo%20Pequetina" target="_blank" class="contact-btn"><i class="fa-brands fa-whatsapp"></i> Consultar sobre este modelo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer with about link and social media links -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3>IL FABBRO PRENSAS</h3>
+            <p>Fabricando soluciones de alta calidad desde 1995. 
+                <br>Nuestro compromiso es ofrecer prensas de excelencia que superen las expectativas de los profesionales más exigentes.</p>
+        </div>
+        <div class="footer-nav">
+            <h4>Enlaces</h4>
+            <a href="products.html">Nuestros Modelos</a>
+            <a href="about.html">Quiénes Somos</a>
+            <a href="blog.html">Blog</a>
+            <a href="pol.html">Política de Privacidad</a>
+        </div>
+        <div class="footer-social">
+            <h4>Síguenos</h4>
+            <div class="social-links">
+                <a href="https://www.facebook.com/Prensas.IlFabbro" target="_blank"><i class="fab fa-facebook-f"> </i></a>
+                <a href="https://www.instagram.com/il.fabbro.prensas/#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/PrensasilFabbro" target="_blank"><i class="fab fa-x"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 IL FABBRO PRENSAS- Todos los derechos reservados</p><br><br>
+    </div>
+</footer>
+
+<script>
+    // Script para el menú móvil
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Cerrar menú al hacer clic fuera de él
+        document.addEventListener('click', function(event) {
+            if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>

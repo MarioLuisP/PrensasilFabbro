@@ -837,6 +837,12 @@ header {
     transform: translateY(-1px);
     box-shadow: 0 3px 8px rgba(201, 100, 66, 0.25);
 }
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
 
 
 /* Alternating layout styles */
