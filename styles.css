@@ -1320,11 +1320,24 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .header-container {
+        position: relative;
+      }
     .brand-name {
         font-weight: 300;
         font-size: 12px;
     }
-    
+    .menu-icon {
+        position: absolute;
+        right: 15px;
+        top: 15px; /* Ajusta según sea necesario */
+        z-index: 100; /* Asegura que esté por encima de otros elementos */
+        max-width: calc(100% - 50px); /* Deja espacio para el icono */
+        overflow: hidden;
+        text-overflow: ellipsis; /* Muestra "..." si el texto es muy largo */
+        white-space: nowrap;    
+      }
+     
     .carousel-slide {
         height: 400px;
     }

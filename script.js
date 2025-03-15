@@ -17,24 +17,21 @@ document.addEventListener('DOMContentLoaded', function() {
     menuToggle.addEventListener('click', function() {
         mobileMenu.classList.toggle('active');
     });
+     
+    // Cierra el menú al hacer clic en un enlace
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+        });
+    });
     
-    // Close menu when clicking outside
+    // Cierra el menú al hacer clic fuera de él
     document.addEventListener('click', function(event) {
-        if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+        if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
             mobileMenu.classList.remove('active');
         }
     });
-});
-// Menu Toggle
-menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!menuToggle.contains(e.target) && !menu.contains(e.target)) {
-        menu.classList.remove('active');
-    }
 });
 
 // Carousel Functionality
