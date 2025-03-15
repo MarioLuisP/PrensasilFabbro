@@ -1,9 +1,14 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRENSAS DE GRABADO IL FABBRO</title>
+    <title>Preguntas Frecuentes - PRENSAS DE GRABADO IL FABBRO</title>
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/dloaaxni6/image/upload/c_pad,w_512/v1741731889/Screenshot_12_bb6lna_wlro8x.png">
 
     <link rel="stylesheet" href="styles.css">
@@ -11,23 +16,109 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=Noto+Serif:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        .faq-container {
+            padding: 40px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .faq-section {
+            margin-bottom: 40px;
+        }
+        
+        .faq-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .faq-divider {
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: #444;
+            padding: 15px 0;
+        }
+        
+        .faq-question .icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question.active .icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            display: none;
+            padding: 0 0 15px 0;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .faq-answer.show {
+            display: block;
+        }
+        
+        .faq-answer ul {
+            padding-left: 25px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer ul li {
+            margin-bottom: 8px;
+        }
+        
+        .decorative-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), var(--primary-light));
+        }
+        
+      
+    </style>
 </head>
 <body>
- <!-- Header with horizontal menu for desktop -->
-<header>
-    <div class="header-container">
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="https://res.cloudinary.com/dloaaxni6/image/upload/c_pad,w_50/v1740937789/Screenshot_12_bb6lna_Circle_ivd4eq.png" alt="IL FABBRO Logo" class="logo">
-            </a>
-        </div>
-        
-        <h1 class="brand-name">PRENSAS DE GRABADO IL FABBRO
-        </h1>
-        
-        <!-- Desktop Menu -->
-              <!-- Desktop Menu -->
-              <nav class="desktop-menu">
+    <!-- Header with horizontal menu for desktop -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="https://res.cloudinary.com/dloaaxni6/image/upload/c_pad,w_50/v1740937789/Screenshot_12_bb6lna_Circle_ivd4eq.png" alt="IL FABBRO Logo" class="logo">
+                </a>
+            </div>
+            
+            <h1 class="brand-name">PRENSAS DE GRABADO IL FABBRO</h1>
+            
+            <!-- Desktop Menu -->
+            <nav class="desktop-menu">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="products.html">Nuestros Modelos</a></li>
@@ -36,26 +127,359 @@
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </nav>
-        
-        <!-- Mobile Menu Icon (hamburger) -->
-        <div class="menu-icon" id="menuToggle">
-            <i class="fas fa-bars"></i>
+            
+            <!-- Mobile Menu Icon (hamburger) -->
+            <div class="menu-icon" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Mobile Menu (hidden by default) -->
+            <div class="menu" id="mobileMenu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Nuestros Modelos</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> Sobre nosotros</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question"></i> Preguntas frecuentes</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
         </div>
-        
-        <!-- Mobile Menu (hidden by default) -->
-        <div class="menu" id="mobileMenu">
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-                <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Nuestros Modelos</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> Sobre nosotros</a></li>
-                <li><a href="faq.html"><i class="fas fa-question"></i> Preguntas frecuentes</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
-            </ul>
-        </div>
-    </div>
-</header>
-    <main>
+    </header>
 
+    <main>
+        <section style="padding-top: 80px; padding-bottom: 80px; max-width: 1200px; margin: 0 auto;">
+            <div class="faq-container">
+                <!-- Decorative line at the top -->
+                <div class="decorative-line"></div>
+                
+                <h1 style="font-family: 'Playfair Display', serif; font-size: 42px; color: var(--secondary-color); margin-bottom: 20px; text-align: center; position: relative; padding-bottom: 15px;">
+                    Preguntas Frecuentes
+                </h1>
+                <div style="width: 80px; height: 3px; background-color: var(--primary-color); margin: 0 auto 40px;"></div>
+                
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px; color: #555; text-align: center;">
+                    Encuentre respuestas a las preguntas más comunes sobre nuestras Prensas de Grabado. 
+                    <br> Si no soluciona su inquietud, en nuestra <a href="index.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">página principal</a> podrá iniciar un CHAT con nuestro bot.
+                    <br> Si aún así le queda alguna consulta, no dude en <a href="contact.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">contactarnos</a>.
+                </p>
+                
+                <!-- Section 1: Tipos de Prensas -->
+                <div class="faq-section">
+                    <h2>
+                        <i class="fas fa-tools" style="color: var(--primary-color); margin-right: 12px;"></i>1. Tipos de Prensas y sus Características
+                    </h2>
+                    <div class="faq-divider"></div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Qué modelos de prensas fabrican?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>La Pequetina es nuestra prensa más compacta y versátil, ideal para quienes buscan calidad en un formato más pequeño.</p>
+                            <p>Si necesitas algo más grande sin perder comodidad, la Intermedia es la opción ideal.</p>
+                            <p>La Prensa Profesional está pensada para quienes buscan un equipo de alto rendimiento.</p>
+                            <p>Puedes ver los detalles en la <a href="products.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">página de productos</a> en este sitio.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Qué ventajas ofrecen?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <ul>
+                                <li>Portabilidad optimizada.</li>
+                                <li>Durabilidad excepcional.</li>
+                                <li>Versatilidad para proyectos profesionales y de estudio.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 2: Experiencia y Valores -->
+                <div class="faq-section">
+                    <h2>
+                        <i class="fas fa-award" style="color: var(--primary-color); margin-right: 12px;"></i>2. Experiencia y Valores del Fabricante
+                    </h2>
+                    <div class="faq-divider"></div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Qué hace especiales a estas prensas?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nos preocupamos por cada detalle para brindarte una herramienta confiable y duradera.</p>
+                            <ul>
+                                <li>Uso de materiales resistentes, de primera calidad, seleccionados especialmente.</li>
+                                <li>Rulemanes en los rodillos.</li>
+                                <li>Montaje estable en cualquiera de los modelos.</li>
+                                <li>Alta precisión en la impresión.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Dónde se fabrican las prensas y cuál es la experiencia del fabricante?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Cada prensa es creada con pasión en Córdoba Capital, por un maestro de artes plásticas con más de 30 años de experiencia en la creación de herramientas para grabado, años de docencia en Bellas Artes y conocimiento profundo de la técnica de grabado.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Qué diferencia a estas prensas de las comerciales?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <ul>
+                                <li>Calidad superior y atención personalizada.</li>
+                                <li>Un diseño artesanal, pensado para durar.</li>
+                                <li>Experiencia y amor por el arte en cada pieza.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Las prensas tienen garantía?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, todas son probadas antes de la entrega y cuentan con garantía para que puedas trabajar con tranquilidad.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Para qué técnicas artísticas son recomendadas?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Son perfectas para aguafuertes, xilografías y diversas técnicas modernas. ¡Queremos que des rienda suelta a tu creatividad!</p>
+                            <p>Puedes visitar la <a href="blog.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">página del blog</a> de este sitio para más información sobre técnicas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 3: Accesorios y Materiales -->
+                <div class="faq-section">
+                    <h2>
+                        <i class="fas fa-cogs" style="color: var(--primary-color); margin-right: 12px;"></i>3. Accesorios y Materiales
+                    </h2>
+                    <div class="faq-divider"></div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿La platina está incluida en la compra?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Para brindarte más opciones, la platina no está incluida, pero te recomendamos utilizar MDF laminado o crudo.</p>
+                            <ul>
+                                <li>Espesor: a partir de 8 mm</li>
+                                <li>No se recomienda mas de 15 mm para la Prensa Profesional.</li>
+                                <li>Ancho: igual al largo del rodillo útil.</li>
+                                <li>Largo: hasta dos veces el ancho del rodillo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Por qué algunas prensas usan chapas en lugar de MDF en la platina?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <ul>
+                                <li>Antiguamente se utilizaba chapa gruesa.</li>
+                                <li>Con el tiempo, se redujo el espesor a 5 mm o menos, lo que provocaba que se doblara y fuera difícil de corregir.</li>
+                            </ul>
+                            <p>El MDF no se deforma con el tiempo, tiene menor durabilidad, pero es extremadamente fácil de reemplazar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Viene con fieltro? ¿Cuál se recomienda?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>El fieltro no está incluido, pero te sugerimos elegir uno denso para grabado, de al menos 5 mm de espesor. Su función es distribuir uniformemente la presión para lograr los mejores resultados.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Qué tipo de pintura se usa en las prensas?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nos aseguramos de que cada prensa tenga una terminación duradera y estética:</p>
+                            <ol>
+                                <li>Se desengrasa con productos especiales.</li>
+                                <li>Se aplica una capa de pintura antioxidante.</li>
+                                <li>Se finaliza con pintura de alta calidad, respetando tiempos de secado adecuados.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Qué ventajas tiene el uso de rulemanes?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <ul>
+                                <li>Aseguran un movimiento suave y uniforme.</li>
+                                <li>Reducen el desgaste y extienden la vida útil de la prensa.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Cómo influye en la Pequetina el diseño de la volanta redonda o manivela en la impresión?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ambas opciones garantizan la misma calidad de impresión. ¡La elección es tuya!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Cómo se mantiene la prensa en buen estado?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Gracias a su diseño con rulemanes, el mantenimiento es mínimo.</p>
+                            <p>Puedes visitar la <a href="blog.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">página del blog</a> en este sitio para consejos de mantenimiento.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 4: Proceso de Compra y Envío -->
+                <div class="faq-section">
+                    <h2>
+                        <i class="fas fa-shipping-fast" style="color: var(--primary-color); margin-right: 12px;"></i>4. Proceso de Compra y Envío
+                    </h2>
+                    <div class="faq-divider"></div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Cuánto tarda la fabricación y entrega?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Cada prensa es fabricada con dedicación, por lo que el tiempo estimado es de 30 días a partir de la seña. Si surge algún imprevisto, te mantendremos informado.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Hay modelos listos para entrega inmediata?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Debido a la alta demanda, generalmente fabricamos a pedido. Esto garantiza que cada cliente reciba un producto hecho especialmente para él.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Cómo es el proceso de pago?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <ul>
+                                <li>Se solicita una seña del 50% para fijar el precio y el tiempo de entrega.</li>
+                                <li>El saldo restante se paga contra entrega.</li>
+                                <li>Métodos de pago: efectivo o transferencia bancaria.</li>
+                                <li>¿Puedo pagar el saldo en partes? Sí, pero la entrega se realiza solo cuando el pago esté completo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Cómo se envían las prensas?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <ul>
+                                <li>Cuando la prensa está terminada, nos pondremos en contacto con el cliente.</li>
+                                <li>El pago debe estar completo antes de iniciar el proceso de envío</li>                               
+                                <li>Pequetina e Intermedia: Se envían en caja por transporte y llegan normalmente en 24 horas hábiles.</li>
+                                <li>Profesional: Debido a su tamaño, requieren un embalaje especial y un traslado más cuidadoso.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Quién paga el costo de envío?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>El cliente cubre el transporte, que se lo abona a la empresa directamente cuando la prensa llega a su casa.</p>
+                            <p>Al precio total de la prensa se suma un pequeño costo adicional por el embalaje y traslado hasta la empresa de envíos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Con qué empresas de envío trabajan?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Empresas de envío según la región:</p>
+                            <ul>
+                                <li>Alta Córdoba: Santiago del Estero, Tucumán, Salta, Jujuy, Chaco y Formosa.</li>
+                                <li>Sendbox: Corrientes, Misiones, Catamarca, La Rioja, Santa Fe y Buenos Aires.</li>
+                                <li>Expreso Patagonia: Regiones del sur.</li>
+                                <li>Córdoba Capital: Se puede coordinar flete o retiro personal.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Cuánto tarda el despacho?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>En general, los envíos se realizan al día siguiente del pago final.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background-color: rgba(201, 100, 66, 0.05); padding: 30px; border-radius: 8px; margin: 40px 0;">
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #555; text-align: center;">
+                        ¿No encontraste la respuesta que buscas?
+                    </p>
+                    <div style="text-align: center;">
+                        <a href="blog.html" class="back-btn" style="margin-right: 15px;">
+                            <i class="fas fa-blog"></i> Visitar nuestro Blog
+                        </a>
+                        <a href="contact.html" class="back-btn" style="margin-top: 15px; background-color: var(--secondary-color);">
+                            <i class="fas fa-envelope"></i> Contactarnos
+                        </a>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="index.html" class="back-btn">
+                        <i class="fas fa-arrow-left"></i> Volver al inicio
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer with about link and social media links -->
@@ -85,13 +509,35 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 IL FABBRO PRENSAS- Todos los derechos reservados</p><br><br>
+            <p>&copy; 2025 IL FABBRO PRENSAS - Todos los derechos reservados</p><br><br>
         </div>
     </footer>
 
-    <!-- Chat Widget -->
- 
-
-    <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        // FAQ accordion functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                // Toggle active class on question
+                question.classList.toggle('active');
+                
+                // Get the answer element
+                const answer = question.nextElementSibling;
+                
+                // Toggle display of answer
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -61,12 +61,12 @@
         <p style="font-family: 'Noto Serif', serif; font-size: 18px; color: #666; font-style: italic;">Historias, técnicas y secretos del arte del grabado</p>
     </div>
 
-    <div class="blog-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px;">
+    <div class="blog-container" style="max-width: 1600px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px;">
         
         <!-- Artículo 1 -->
         <div class="blog-card" style="background-color: white; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); position: relative; transition: transform 0.3s ease;">
             <div class="blog-image" style="height: 200px; overflow: hidden;">
-                <img src="/api/placeholder/400/320" alt="Prensa de grabado" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741996225/65_muiqyg.png" alt="Prensa de grabado" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
             </div>
             <div class="blog-content" style="padding: 25px; position: relative;">
                 <span class="blog-date" style="display: inline-block; font-family: 'Playfair Display', serif; font-size: 14px; color: var(--primary-color); margin-bottom: 10px; font-style: italic;">15 de febrero, 2025</span>
@@ -82,7 +82,7 @@
         <!-- Artículo 2 -->
         <div class="blog-card" style="background-color: white; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); position: relative; transition: transform 0.3s ease;">
             <div class="blog-image" style="height: 200px; overflow: hidden;">
-                <img src="/api/placeholder/400/320" alt="Mantenimiento de prensa" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741994237/ergav71jQcKTsRYS-generated_image_ptfgtv.jpg" alt="Mantenimiento de prensa" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
             </div>
             <div class="blog-content" style="padding: 25px; position: relative;">
                 <span class="blog-date" style="display: inline-block; font-family: 'Playfair Display', serif; font-size: 14px; color: var(--primary-color); margin-bottom: 10px; font-style: italic;">28 de enero, 2025</span>
@@ -94,11 +94,25 @@
                 </a>
             </div>
         </div>
-        
+         <!-- Artículo 4 (nuevo) -->
+     <div class="blog-card" style="background-color: white; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); position: relative; transition: transform 0.3s ease;">
+        <div class="blog-image" style="height: 200px; overflow: hidden;">
+            <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741994501/totenart-tutorial-planchas-lista-1_hlrlxm.jpg" alt="Técnicas de grabado" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+        </div>
+        <div class="blog-content" style="padding: 25px; position: relative;">
+            <span class="blog-date" style="display: inline-block; font-family: 'Playfair Display', serif; font-size: 14px; color: var(--primary-color); margin-bottom: 10px; font-style: italic;">15 de marzo, 2025</span>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 15px; color: var(--secondary-color); border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">Informe sobre Técnicas de Grabado en una Prensa de Rodillos</h2>
+            <p style="font-family: 'Noto Serif', serif; color: #555; line-height: 1.8; margin-bottom: 20px;">Un tórculo de rodillos es una prensa versátil para diversas técnicas de grabado. Descubre las principales técnicas que puedes realizar...</p>
+            <a href="#" class="blog-read-more" onclick="mostrarArticulo(4); return false;" style="display: inline-flex; align-items: center; color: var(--primary-color); font-family: 'Playfair Display', serif; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                Continuar leyendo
+                <i class="fas fa-long-arrow-alt-right" style="margin-left: 8px; transition: transform 0.3s ease;"></i>
+            </a>
+        </div>
+    </div>
         <!-- Artículo 3 (nuevo) -->
         <div class="blog-card" style="background-color: white; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); position: relative; transition: transform 0.3s ease;">
             <div class="blog-image" style="height: 200px; overflow: hidden;">
-                <img src="/api/placeholder/400/320" alt="Historia del grabado" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                <img src="https://res.cloudinary.com/dloaaxni6/image/upload/v1741993192/DALL_E_2025-03-14_19.59.19_-_A_detailed_illustration_of_a_traditional_printing_press_known_as_a_t%C3%B3rculo_de_rodillos_used_for_printmaking_but_specifically_with_only_two_large_ro_hwp1j1.webp" alt="Historia del grabado" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
             </div>
             <div class="blog-content" style="padding: 25px; position: relative;">
                 <span class="blog-date" style="display: inline-block; font-family: 'Playfair Display', serif; font-size: 14px; color: var(--primary-color); margin-bottom: 10px; font-style: italic;">5 de marzo, 2025</span>
@@ -110,9 +124,10 @@
                 </a>
             </div>
         </div>
-    </div>
+    
 
-    <!-- Vista detallada del artículo -->
+    </div>
+        <!-- Vista detallada del artículo -->
     <div id="detalle" style="display:none; max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: var(--border-radius); box-shadow: var(--box-shadow); position: relative;">
         <button onclick="volver()" class="back-btn"><i class="fas fa-arrow-left"></i> Volver a artículos</button>
         
@@ -178,22 +193,27 @@
  
     <script>
         const articulos = [
-            {
-                titulo: "Cómo elegir la mejor prensa para grabado",
-                fecha: "15 de febrero, 2025",
-                contenido: "Las prensas de grabado vienen en distintos modelos y tamaños. Aquí te cuento cuál es la mejor opción según tu tipo de trabajo.<br><br>Una prensa de tórculo es ideal para grabado en huecograbado. Su diseño con cilindro y platina permite aplicar una presión uniforme en toda la superficie, lo que resulta perfecto para técnicas como aguafuerte, aguatinta o punta seca.<br><br>Para linografía y otras técnicas en relieve, una prensa vertical puede ser suficiente, aunque muchos artistas prefieren un tórculo por su versatilidad. Si trabajas principalmente con xilografía, una prensa de presión plana podría ser más adecuada.<br><br>El tamaño de la prensa debe determinarse por el formato de papel con el que planeas trabajar. Recuerda que necesitarás una superficie de trabajo mayor que tu papel para acomodar la matriz y los fieltros.<br><br>La construcción es otro factor crucial: las prensas con estructura de acero ofrecen mayor durabilidad y estabilidad que las de aluminio, aunque son más pesadas y costosas.<br><br>Finalmente, considera tu espacio de trabajo y presupuesto. Existen excelentes opciones portátiles si tienes limitaciones de espacio, pero generalmente ofrecen menos presión que los modelos de mesa más robustos."
-            },
-            {
-                titulo: "El mantenimiento de una prensa de grabado",
-                fecha: "28 de enero, 2025",
-                contenido: "Para que tu prensa dure años en perfectas condiciones, es fundamental seguir ciertas rutinas de mantenimiento.<br><br>La limpieza regular es esencial. Después de cada sesión de trabajo, limpia cualquier residuo de tinta o suciedad de los rodillos, la platina y otras partes de la prensa. Utiliza un paño suave y productos de limpieza no corrosivos.<br><br>La lubricación de los componentes móviles debe realizarse periódicamente. Los rodamientos, engranajes y ejes necesitan estar bien lubricados para funcionar correctamente. Usa aceite de máquina de buena calidad y aplícalo según las recomendaciones del fabricante.<br><br>Revisa y ajusta regularmente la presión de la prensa. Con el tiempo, los resortes y otros componentes pueden desgastarse, lo que afecta la precisión de la presión. Una presión inadecuada puede comprometer la calidad de tus grabados.<br><br>Protege tu prensa del polvo y la humedad cuando no esté en uso. Una funda de tela transpirable puede ser ideal para este propósito.<br><br>Inspecciona periódicamente los fieltros y mantón. Estos componentes se desgastan con el uso y pueden necesitar ser reemplazados o acondicionados para mantener resultados óptimos.<br><br>Si notas ruidos inusuales o resistencia al girar los rodillos, es momento de una revisión más profunda. No ignores estos signos, ya que podrían indicar problemas que, si no se atienden, pueden provocar daños mayores."
-            },
-            {
-                titulo: "La historia del grabado a través de los siglos",
-                fecha: "5 de marzo, 2025",
-                contenido: "El grabado es una de las técnicas artísticas más antiguas y fascinantes, con una historia que se remonta a varios milenios.<br><br>Las primeras manifestaciones de grabado se encuentran en China, alrededor del siglo II d.C., con la invención del papel y las primeras xilografías. Estas primeras obras eran principalmente textos budistas ilustrados con imágenes sencillas.<br><br>En Europa, el grabado se popularizó durante el siglo XV con la introducción de la imprenta de Gutenberg. Los primeros grabadores europeos importantes como Alberto Durero y Martin Schongauer elevaron esta técnica al nivel de arte refinado.<br><br>El siglo XVII vio el desarrollo del aguafuerte, técnica que permitió a artistas como Rembrandt crear obras con una extraordinaria riqueza de tonos y texturas. Sus grabados al aguafuerte revolucionaron las posibilidades expresivas del medio.<br><br>En los siglos XVIII y XIX surgieron nuevas técnicas como la litografía, inventada por Alois Senefelder, que permitió a artistas como Goya y Daumier crear tiradas mayores con gran detalle y variedad tonal.<br><br>El siglo XX trajo una explosión de creatividad en el grabado, con artistas como Picasso, Miró y Hayter explorando sus posibilidades expresivas. La serigrafía se popularizó, especialmente con el movimiento Pop Art y artistas como Andy Warhol.<br><br>Hoy, el grabado continúa evolucionando, integrando nuevas tecnologías junto con las técnicas tradicionales, demostrando la vitalidad continua de este arte ancestral que sigue cautivando a artistas y coleccionistas por igual."
-            }
-        ];
+    {
+        titulo: "Cómo elegir la mejor prensa para grabado",
+        fecha: "15 de febrero, 2025",
+        contenido: "Las prensas de grabado vienen en distintos modelos y tamaños. Aquí te cuento cuál es la mejor opción según tu tipo de trabajo.<br><br>Una prensa de tórculo es ideal para grabado en huecograbado. Su diseño con cilindro y platina permite aplicar una presión uniforme en toda la superficie, lo que resulta perfecto para técnicas como aguafuerte, aguatinta o punta seca.<br><br>Para linografía y otras técnicas en relieve, una prensa vertical puede ser suficiente, aunque muchos artistas prefieren un tórculo por su versatilidad. Si trabajas principalmente con xilografía, una prensa de presión plana podría ser más adecuada.<br><br>El tamaño de la prensa debe determinarse por el formato de papel con el que planeas trabajar. Recuerda que necesitarás una superficie de trabajo mayor que tu papel para acomodar la matriz y los fieltros.<br><br>La construcción es otro factor crucial: las prensas con estructura de acero ofrecen mayor durabilidad y estabilidad que las de aluminio, aunque son más pesadas y costosas.<br><br>Finalmente, considera tu espacio de trabajo y presupuesto. Existen excelentes opciones portátiles si tienes limitaciones de espacio, pero generalmente ofrecen menos presión que los modelos de mesa más robustos."
+    },
+    {
+        titulo: "El mantenimiento de una prensa de grabado",
+        fecha: "28 de enero, 2025",
+        contenido: "Para que tu prensa dure años en perfectas condiciones, es fundamental seguir ciertas rutinas de mantenimiento.<br><br>La limpieza regular es esencial. Después de cada sesión de trabajo, limpia cualquier residuo de tinta o suciedad de los rodillos, la platina y otras partes de la prensa. Utiliza un paño suave y productos de limpieza no corrosivos.<br><br>La lubricación de los componentes móviles debe realizarse periódicamente. Los rodamientos, engranajes y ejes necesitan estar bien lubricados para funcionar correctamente. Usa aceite de máquina de buena calidad y aplícalo según las recomendaciones del fabricante.<br><br>Revisa y ajusta regularmente la presión de la prensa. Con el tiempo, los resortes y otros componentes pueden desgastarse, lo que afecta la precisión de la presión. Una presión inadecuada puede comprometer la calidad de tus grabados.<br><br>Protege tu prensa del polvo y la humedad cuando no esté en uso. Una funda de tela transpirable puede ser ideal para este propósito.<br><br>Inspecciona periódicamente los fieltros y mantón. Estos componentes se desgastan con el uso y pueden necesitar ser reemplazados o acondicionados para mantener resultados óptimos.<br><br>Si notas ruidos inusuales o resistencia al girar los rodillos, es momento de una revisión más profunda. No ignores estos signos, ya que podrían indicar problemas que, si no se atienden, pueden provocar daños mayores."
+    },
+    {
+        titulo: "La historia del grabado a través de los siglos",
+        fecha: "5 de marzo, 2025",
+        contenido: "El grabado es una de las técnicas artísticas más antiguas y fascinantes, con una historia que se remonta a varios milenios.<br><br>Las primeras manifestaciones de grabado se encuentran en China, alrededor del siglo II d.C., con la invención del papel y las primeras xilografías. Estas primeras obras eran principalmente textos budistas ilustrados con imágenes sencillas.<br><br>En Europa, el grabado se popularizó durante el siglo XV con la introducción de la imprenta de Gutenberg. Los primeros grabadores europeos importantes como Alberto Durero y Martin Schongauer elevaron esta técnica al nivel de arte refinado.<br><br>El siglo XVII vio el desarrollo del aguafuerte, técnica que permitió a artistas como Rembrandt crear obras con una extraordinaria riqueza de tonos y texturas. Sus grabados al aguafuerte revolucionaron las posibilidades expresivas del medio.<br><br>En los siglos XVIII y XIX surgieron nuevas técnicas como la litografía, inventada por Alois Senefelder, que permitió a artistas como Goya y Daumier crear tiradas mayores con gran detalle y variedad tonal.<br><br>El siglo XX trajo una explosión de creatividad en el grabado, con artistas como Picasso, Miró y Hayter explorando sus posibilidades expresivas. La serigrafía se popularizó, especialmente con el movimiento Pop Art y artistas como Andy Warhol.<br><br>Hoy, el grabado continúa evolucionando, integrando nuevas tecnologías junto con las técnicas tradicionales, demostrando la vitalidad continua de este arte ancestral que sigue cautivando a artistas y coleccionistas por igual."
+    },
+    { 
+        titulo: "Informe sobre Técnicas de Grabado en una Prensa de Rodillos",
+        fecha: "15 de marzo, 2025",
+        contenido: "Un tórculo de rodillos es una prensa utilizada para la impresión de diversas técnicas de grabado. Su diseño permite aplicar presión uniforme sobre una matriz y papel, logrando impresiones detalladas. A continuación, se presentan las principales técnicas que pueden realizarse con un tórculo.<br><br><br><br>1. Grabado en Hueco (Intaglio)<br><br>En estas técnicas, la imagen se graba en la matriz a través de incisiones, que luego son entintadas y transferidas al papel mediante presión.<br><br>- Aguafuerte: Se cubre una placa metálica con barniz y se dibuja sobre ella con una aguja. Luego, la placa se sumerge en ácido, que corroe las líneas expuestas. Después de la limpieza, la tinta se deposita en los surcos y se imprime sobre papel húmedo.<br>- Aguatinta: Se emplea resina en polvo adherida a la placa metálica, que es sometida a ácido en diferentes tiempos para crear una amplia gama de tonos y texturas.<br>- Punta seca: Se dibuja directamente sobre la placa con una aguja afilada, dejando líneas profundas con rebabas que generan un efecto aterciopelado en la impresión.<br>- Mezzotinta: Se texturiza toda la placa con un graneador y luego se alisan ciertas áreas para obtener una imagen con ricas gradaciones tonales.<br><br><br><br>2. Grabado en Relieve<br><br>En el grabado en relieve, la tinta se aplica en las zonas en alto relieve de la matriz, y no en los surcos.<br><br>- Xilografía: Se talla una plancha de madera eliminando las áreas que no formarán parte de la imagen impresa.<br>- Linograbado: Similar a la xilografía, pero empleando linóleo en lugar de madera, lo que permite cortes más fluidos y suaves.<br><br><br><br>3. Técnicas Mixtas y Experimentales<br><br>Estas técnicas combinan procesos y materiales diversos para lograr efectos únicos.<br><br>- Collagraph: Se construye una matriz con materiales diversos (cartón, telas, pegamentos) que generan texturas. Puede entintarse en relieve o en hueco.<br>- Monotipo: Se pinta o entinta sobre una superficie lisa, como acrílico o metal, y se imprime una única vez, generando una obra única.<br>- Grabado sobre plástico: Se utiliza PVC o acrílico tallado con buril o herramientas calientes para crear líneas y texturas.<br><br><br><br>4. Gofrado (Estampado en Relieve)<br><br>El gofrado es una técnica que no utiliza tinta, sino que genera relieve en el papel a través de la presión del tórculo.<br><br>- Gofrado con matriz en alto relieve: Se usa una plancha de cartón, acrílico o metal con volumen para crear una impresión tridimensional en el papel.<br>- Gofrado ciego: Similar al anterior, pero sin tinta, logrando una textura sutil.<br>- Gofrado con elementos naturales o textiles: Se emplean materiales como hojas, telas o encajes para generar texturas orgánicas sobre el papel.<br><br><br><br>Conclusión<br><br>El tórculo de rodillos es una herramienta versátil que permite la realización de diversas técnicas de grabado. Desde el intaglio y el relieve hasta el gofrado, cada método ofrece posibilidades creativas únicas, adaptadas a distintos estilos y necesidades artísticas.<br>"
+    }
+];
     
         function mostrarArticulo(index) {
             document.getElementById("article-title").innerText = articulos[index - 1].titulo;
