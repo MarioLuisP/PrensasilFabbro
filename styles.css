@@ -1330,7 +1330,7 @@ footer {
     .menu-icon {
         position: absolute;
         right: 15px;
-        top: 15px; /* Ajusta según sea necesario */
+        top: 1px; /* Ajusta según sea necesario */
         z-index: 100; /* Asegura que esté por encima de otros elementos */
         max-width: calc(100% - 50px); /* Deja espacio para el icono */
         overflow: hidden;
@@ -1394,6 +1394,8 @@ footer {
     
     .logo {
         height: 40px;
+        margin-left: 10px;
+        margin-right: 2px;
     }
     
     .brand-name {

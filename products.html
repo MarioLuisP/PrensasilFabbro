@@ -106,7 +106,7 @@
                     </div>
                     
                     <div class="product-cta">
-                        <a href="detail-pequetina.html" class="btn primary-btn">ME INTERESA</a>
+                        <a href="detail-pequetina.html" class="btn primary-btn">MAS DETALLES</a>
                         <a href="galeria-pequetina.html" class="gallery-link">Recorrer la Galería <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                     </div>
                     
                     <div class="product-cta">
-                        <a href="detail-intermedia.html" class="btn primary-btn">ME INTERESA</a>
+                        <a href="detail-intermedia.html" class="btn primary-btn">MAS DETALLES</a>
                         <a href="galeria-intermedia.html" class="gallery-link">Recorrer la Galería <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -176,7 +176,7 @@
                     </div>
                     
                     <div class="product-cta">
-                        <a href="detail-profesional.html" class="btn primary-btn">ME INTERESA</a>
+                        <a href="detail-profesional.html" class="btn primary-btn">MAS DETALLES</a>
                         <a href="galeria-profesional.html" class="gallery-link">Recorrer la Galería <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -211,7 +211,7 @@
                     </div>
                     
                     <div class="product-cta">
-                        <a href="#" class="btn primary-btn">Me interesa</a>
+                        <a href="detail-especiales.html" class="btn primary-btn">MAS DETALLES</a>
                         <a href="galeria-especiales.html" class="gallery-link">Recorrer la Galería <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -249,11 +249,11 @@
             </div>
             <div class="footer-nav">
                 <h4>Enlaces</h4>
-                <a href="products.html">Nuestros Modelos</a>
                 <a href="about.html">Quiénes Somos</a>
+                <a href="feedback.html">Nuestros clientes opinan</a>
                 <a href="blog.html">Blog</a>
                 <a href="pol.html">Política de Privacidad</a>
-            </div>
+             </div>
             <div class="footer-social">
                 <h4>Síguenos</h4>
                 <div class="social-links">
@@ -269,7 +269,23 @@
         </div>
     </footer>
 
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const page = window.location.pathname; // Obtiene el nombre de la página actual
 
+  // Restaurar posición si existe
+  const scrollPos = sessionStorage.getItem(page);
+  if (scrollPos) {
+    window.scrollTo(0, scrollPos);
+  }
+
+  // Guardar la posición en cada scroll
+  window.addEventListener("scroll", () => {
+    sessionStorage.setItem(page, window.scrollY);
+  });
+});
+      </script>
+      
     <script src="script.js"></script>
 </body>
 </html>

@@ -538,6 +538,23 @@
                 }
             });
         });
-    </script>
+  
+    // SCRIPT PATA VOLVER A LA POSICIÓN EN QUE SE ABANDONÓ LA PAGINA
+    
+        document.addEventListener("DOMContentLoaded", () => {
+  const page = window.location.pathname; // Obtiene el nombre de la página actual
+
+  // Restaurar posición si existe
+  const scrollPos = sessionStorage.getItem(page);
+  if (scrollPos) {
+    window.scrollTo(0, scrollPos);
+  }
+
+  // Guardar la posición en cada scroll
+  window.addEventListener("scroll", () => {
+    sessionStorage.setItem(page, window.scrollY);
+  });
+});
+      </script>
 </body>
 </html>
