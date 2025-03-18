@@ -149,6 +149,7 @@ header {
 .feedback-btn {
     display: inline-flex;
     align-items: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     padding: 12px 22px;
     background: linear-gradient(135deg, #FFA500, #FF6347);
     color: white;
