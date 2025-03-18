@@ -141,7 +141,56 @@ header {
 .desktop-menu ul li:hover::after {
     width: 100%;
 }
+.feedback-container {
+    margin-top: 25px;
+    text-align: center;
+}
 
+.feedback-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #FFA500, #FF6347);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 8px 15px rgba(255, 99, 71, 0.2);
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.feedback-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.feedback-btn:hover::before {
+    left: 100%;
+}
+
+.feedback-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(255, 99, 71, 0.3);
+}
+
+.feedback-icon {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.feedback-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(255, 99, 71, 0.2);
+}
 /* Mobile Menu Styles */
 .menu-icon {
     display: none;
